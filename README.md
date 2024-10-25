@@ -8,6 +8,7 @@ In an increasingly digital world, traditional methods of identity verification a
 2. Data breaches 
 3. Lack of privacy
 4. Identity theft
+5. Carrying multiple cards for different purposes, like payments, college entry, office systems, library cards etc.
 
 # Solution 
 
