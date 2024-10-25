@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KryTapp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/kryptapp-logo.png') }}" alt="Krytapp Logo">
+            <h1>KrypTapp</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <h2>Your Privacy, Our Priority</h2>
+        <a href="{{ url_for('register') }}" class="connect-button">Connect Metamask</a>
+    </section>
+
+    <div class="center-content-wrapper">
+        <p class="description">At KrypTapp, we prioritize your privacy and security by providing a seamless and secure platform for all your financial transactions. Whether you're looking to authenticate, pay, or receive money, our cutting-edge blockchain-based solution ensures that your data is protected every step of the way.</p>
+        <div class="center-content">
+            <div class="crypto-cards">
+                <div class="crypto-card">
+                    <div class="card-header">
+                        <img src="{{ url_for('static', filename='images/ethereum-logo.png') }}" alt="Ethereum" class="card-logo">
+                        <p class="card-title">KrypTapp</p>
+                    </div>
+                    <div class="card-info">
+                        <p class="card-balance">Balance: 0 KRYP</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="receive-section">
+                <form class="receive-form">
+                    <input type="text" placeholder="Amount (KRYP)" class="input-field" id="amount-input">
+                    <div class="error-message" id="amount-error">Please enter a valid number greater than 0</div>
+                    <input type="text" placeholder="Enter Message" class="input-field">
+                    <button type="button" class="receive-btn" disabled>Receive Now</button>
+                </form>
+            </div>
+        
+            <div id="popup-card" class="popup-card hidden">
+                <div class="card-content" id="card-message">
+                    <div class="scan-animation-container">
+                        <div class="credit-card">
+                            <div class="card-chip"></div>
+                            <div class="scan-line"></div>
+                        </div>
+                    </div>
+                    <p>Scan the card</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="quick-links">
+        <div class="container">
+            <h2>QUICK LINKS</h2>
+            <div class="links-container">
+                <a href="{{ url_for('scan') }}">
+                    <div class="link-box">
+                    <i class="fa-regular fa-credit-card"></i>
+                    <p>Scan and Pay</p>
+                    </div>
+                </a>
+                <div class="link-box">
+                    <i class="fa-regular fa-address-card"></i>
+                    <p>Authenticate</p>
+                </div>
+                <div class="link-box">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <p>Check Details</p>
+                </div>
+                <div class="link-box">
+                    <i class="fa-solid fa-money-check-dollar"></i>
+                    <p>Receive Money</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="get-in-touch">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p>Have questions or need assistance? Feel free to reach out to us! We're here to help you every step of the way.</p>
+            <form>
+                <input type="email" placeholder="Your Email" required>
+                <input type="text" placeholder="Name" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Get In Touch</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <img id="imgkryp" src="{{ url_for('static', filename='images/kryptapp-logo.png') }}" alt="Krytapp Logo" width="50" height="50">
+                <div class="footer-logo">
+                    <p>At KryTapp, we prioritize your privacy and security by providing a seamless and secure platform for all your financial transactions. Whether you're looking to authenticate, pay, or receive money, our cutting-edge blockchain-based solution ensures that your data is protected every step of the way. We're committed to making your digital interactions safer and more efficient.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Get to know us!</h3>
+                        <ul>
+                            <li>Home</li>
+                            <li>Blog</li>
+                            <li>About KryTapp</li>
+                            <li>Services</li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>KryTapp Payment Products</h3>
+                        <ul>
+                            <li>Buisness Card</li>
+                            <li>Reload your balance</li>
+                            <li>Metamask Currency</li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Let us help you!</h3>
+                        <ul>
+                            <li>Your Account</li>
+                            <li>Your Orders</li>
+                            <li>Help</li>
+                            <li>Manage your content</li>
+                            <li>Complaint</li>
+                            <li>KryTapp and Crypto</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy All Rights Reserved KryTapp 2024</p>
+            </div>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
